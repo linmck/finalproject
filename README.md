@@ -8,10 +8,10 @@ by Ellen Hsu, Samita Limbu, and Lindsey McKenna
 - **Wed, Feb 26:** Charts and Predictions due
 - **Sat, Feb 29:** Front End App/Website due
 - **Mon, Mar 2: FINAL PRESENTATION**
-<br />
-- **Samita:** Machine Learning (with assistance)
-- **Lindsey:** Additional Charts (can be non-ML)
-- **Ellen:** Flask App/Presentation Website
+
+**Samita:** Machine Learning (with assistance)<br>
+**Lindsey:** Additional Charts (can be non-ML)<br>
+**Ellen:** Flask App/Presentation Website<br>
 
 
 ## Project Topic
