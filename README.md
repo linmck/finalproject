@@ -4,14 +4,15 @@ by Ellen Hsu, Samita Limbu, and Lindsey McKenna
 
 ## Due Dates
 - **Sat, Feb 22:** Initial Analysis (choose 3-4 indicators/features, ML model)
-- **Mon, Feb 24:** 
-- **Wed, Feb 26:** Charts and Predictions due
+- **Mon, Feb 24:** Charts and Models due
+- **Wed, Feb 26:** (Edits & Revisions)
 - **Sat, Feb 29:** Front End App/Website due
 - **Mon, Mar 2: FINAL PRESENTATION**
 
-**Samita:** Machine Learning (with assistance)<br>
-**Lindsey:** Additional Charts (can be non-ML)<br>
-**Ellen:** Flask App/Presentation Website<br>
+**Samita:** Primary charts and indicators
+**Ellen:** Machine Learning Models<br>
+**Lindsey:** Exploratory charts and indicators <br>
+**Ellen:** Flask App or GitHub Pages<br>
 
 
 ## Project Topic
