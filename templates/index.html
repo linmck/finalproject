@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Predicting HDI: Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!-- Header -->
+    <header class="row">
+      <h1><a href="/">Predicting HDI</a></h1>
+      <!-- Navigation -->
+      <nav>
+          <ul>
+              <li><a href="/">Intro</a></li>
+              <li><a href="/">Primary Indicators</a></li>
+              <li><a href="/">Secondary Indicators</a></li>
+              <li><a href="/predictor">Predicting HDI</a></li>
+              <li><a href="/">About the Data</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="row main-content">
+      <h3>World Development Indicators</h3>
+      <p>We are interested in exploring the Sustainable Development Goals set forth by The World Bank that they would like to
+        achieve by 2030. These goals are measured by several <a
+          href="http://datatopics.worldbank.org/world-development-indicators/" target="new">World Development Indicators</a>.
+        We will select several indicators to help predict the development of a country as measured by the <a
+          href="http://hdr.undp.org/en/data#" target="new">Human Development Index</a>.</p>
+      <h3>HDI</h3>
+      <p>The Human Development Index is a comprehensive measure of the development of a country that takes into account
+        factors other than just GDP such as health, education, infrastructure, etc.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="row">
+      <p>&copy;2020 Ellen Hsu, Samita Limbu, Lindsey McKenna - University of Oregon Data Analytics Boot Camp.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

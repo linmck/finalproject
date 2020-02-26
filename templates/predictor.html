@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Predicting HDI: Application</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!-- Header -->
+    <header class="row">
+      <h1><a href="/">Predicting HDI</a></h1>
+      <!-- Navigation -->
+      <nav>
+          <ul>
+              <li><a href="/">Intro</a></li>
+              <li><a href="/">Primary Indicators</a></li>
+              <li><a href="/">Secondary Indicators</a></li>
+              <li><a href="/predictor">Predicting HDI</a></li>
+              <li><a href="/">About the Data</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="row main-content">
+
+      <h3>The App</h3>
+      <p>Some World Development Indicators (WDIs) contribute to HDI more than others. Find the WDIs that help predict HDI
+        using the form below. Once you have a good predictive model with an R<sup>2</sup> score > 0.8, you can calculate a country's 
+        HDI by filling in the (known or estimated) values for each indicator.</p>
+
+      <form class="row">
+      <div class="form-group">
+
+        <p>Step 1: Select one or multiple indicators to <br>create a predictive model.</p>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="lifeexpectancy" value="lifeexpectancy">
+          <label class="form-check-label" for="lifeexpectancy">Life Expectancy</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="agriculture" value="agriculture">
+          <label class="form-check-label" for="agriculture">Agriculture</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="gdp" value="gdp">
+          <label for="gdp">GDP</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="population" value="population">
+          <label class="form-check-label" for="population">Population</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="employment" value="employment">
+          <label class="form-check-label" for="employment">Employment</label>
+        </div>
+
+        <div class="row scores">
+          <p class="small">Hint: Aim for a score > 0.8.</p>
+          <button type="submit" class="btn btn-primary" href="/score" role="button">Score My Model</button>
+          <div id="model">{{ output.score }}</div>    
+        </div>
+
+      </div>
+      </form>
+
+      <div class="row end">
+        <p><a href="/predictor2">Step 2: Use your model to predict HDI. >></a></p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="row">
+      <p>&copy;2020 Ellen Hsu, Samita Limbu, Lindsey McKenna - University of Oregon Data Analytics Boot Camp.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
