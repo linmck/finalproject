@@ -1,2 +1,1 @@
-# Insert your password here
-postgres_pw = 'postgres'
+postgres_pw = '3ll3nhsu'
