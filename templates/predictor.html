@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Predicting HDI: Application</title>
+  <title>Predicting HDI: The App</title>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
@@ -35,42 +38,49 @@
         using the form below. Once you have a good predictive model with an R<sup>2</sup> score > 0.8, you can calculate a country's 
         HDI by filling in the (known or estimated) values for each indicator.</p>
 
-      <form class="row">
+      <form class="row" method="post" action="{{ url_for('score') }}">
       <div class="form-group">
 
         <p>Step 1: Select one or multiple indicators to <br>create a predictive model.</p>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="lifeexpectancy" value="lifeexpectancy">
-          <label class="form-check-label" for="lifeexpectancy">Life Expectancy</label>
+
+        <div class="row">
+          <label class="right" for="lifeexpectancy">Life Expectancy (Years)</label>
+          <input class="wide" name="lifeexpectancy">
         </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="agriculture" value="agriculture">
-          <label class="form-check-label" for="agriculture">Agriculture</label>
+        <div class="row">
+          <label class="right" for="agriculture">Agriculture (% of GDP)</label>
+          <input class="wide" name="agriculture">
         </div>
-        <div class="form-check">
-          <input type="checkbox" id="gdp" value="gdp">
-          <label for="gdp">GDP</label>
+        <div class="row">
+          <label class="right" for="gdp">GDP (bil USD)</label>
+          <input class="wide" name="gdp">
         </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="population" value="population">
-          <label class="form-check-label" for="population">Population</label>
+        <div class="row">
+          <label class="right" for="population">Population</label>
+          <input class="wide" name="population">
         </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="employment" value="employment">
-          <label class="form-check-label" for="employment">Employment</label>
+        <div class="row">
+          <label class="right" for="employment">Employment (%)</label>
+          <input class="wide" name="employment">
         </div>
 
         <div class="row scores">
-          <p class="small">Hint: Aim for a score > 0.8.</p>
-          <button type="submit" class="btn btn-primary" href="/score" role="button">Score My Model</button>
-          <div id="model">{{ output.score }}</div>    
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button class="btn btn-default">Model Score:</button>
+            <div id="score"> {{ score }}</div>      
+          </div>            
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button class="btn btn-primary">Predict HDI</button>
+            <div id="hdi"> {{ hdi }}</div>                    
+          </div>            
         </div>
 
       </div>
       </form>
 
       <div class="row end">
-        <p><a href="/predictor2">Step 2: Use your model to predict HDI. >></a></p>
+        <p>HDI > 0.8 is considered well-developed. How did your country do?</p>
       </div>
 
     </div>
