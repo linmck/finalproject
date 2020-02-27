@@ -23,67 +23,82 @@
       <nav>
           <ul>
               <li><a href="/">Intro</a></li>
-              <li><a href="/">Primary Indicators</a></li>
-              <li><a href="/">Secondary Indicators</a></li>
+              <li><a href="/primary">Primary Indicators</a></li>
+              <li><a href="/secondary">Secondary Indicators</a></li>
               <li><a href="/predictor">Predicting HDI</a></li>
-              <li><a href="/">About the Data</a></li>
+              <li><a href="/data">About the Data</a></li>
           </ul>
       </nav>
     </header>
 
     <div class="row main-content">
 
-      <h3>The App</h3>
-      <p>Some World Development Indicators (WDIs) contribute to HDI more than others. Find the WDIs that help predict HDI
-        using the form below. Once you have a good predictive model with an R<sup>2</sup> score > 0.8, you can calculate a country's 
-        HDI by filling in the (known or estimated) values for each indicator.</p>
+      <div class="app col-xs-5 col-sm-5 col-md-5 col-lg-5">
+        <h3>World Development Indicators (WDI)</h3>
 
-      <form class="row" method="post" action="{{ url_for('score') }}">
-      <div class="form-group">
+        <form class="row" method="post" action="{{ url_for('score') }}">
+          <div class="form-group">
 
-        <p>Step 1: Select one or multiple indicators to <br>create a predictive model.</p>
+            <p>Fill in one or more values below to calculate a model score and predict an HDI.</p>
 
-        <div class="row">
-          <label class="right" for="lifeexpectancy">Life Expectancy (Years)</label>
-          <input class="wide" name="lifeexpectancy">
-        </div>
-        <div class="row">
-          <label class="right" for="agriculture">Agriculture (% of GDP)</label>
-          <input class="wide" name="agriculture">
-        </div>
-        <div class="row">
-          <label class="right" for="gdp">GDP (bil USD)</label>
-          <input class="wide" name="gdp">
-        </div>
-        <div class="row">
-          <label class="right" for="population">Population</label>
-          <input class="wide" name="population">
-        </div>
-        <div class="row">
-          <label class="right" for="employment">Employment (%)</label>
-          <input class="wide" name="employment">
-        </div>
+            <div class="row">
+              <label class="right" for="lifeexpectancy">Life Expectancy (Years)</label>
+              <input class="wide" name="lifeexpectancy"> <small>(max 120)</small>
+            </div>
+            <div class="row">
+              <label class="right" for="agriculture">Agriculture (% of GDP)</label>
+              <input class="wide" name="agriculture"> <small>(max 100)</small>
+            </div>
+            <div class="row">
+              <label class="right" for="population">Population (million)</label>
+              <input class="wide" name="population"> <small>(max 8,000)</small>
+            </div>
+            <div class="row">
+              <label class="right" for="gdp">GDP (billion USD)</label>
+              <input class="wide" name="gdp"> <small>(max 80,000)</small>
+            </div>
+            <div class="row">
+              <label class="right" for="employment">Employment (%)</label>
+              <input class="wide" name="employment"> <small>(max 100)</small>
+            </div>
 
-        <div class="row scores">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <button class="btn btn-default">Model Score:</button>
-            <div id="score"> {{ score }}</div>      
-          </div>            
+            <div class="row scores">
 
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <button class="btn btn-primary">Predict HDI</button>
-            <div id="hdi"> {{ hdi }}</div>                    
-          </div>            
-        </div>
+              <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <button class="btn btn-default">Model Score:</button>
+                <div id="score"> {{ score }}</div>      
+              </div>            
 
-      </div>
-      </form>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <button class="btn btn-primary">Predict HDI</button>
+                <div id="hdi"> {{ hdi }}</div>                    
+              </div>        
 
-      <div class="row end">
-        <p>HDI > 0.8 is considered well-developed. How did your country do?</p>
-      </div>
+            </div>
 
-    </div>
+          </div>
+        </form>
+      </div>  
+
+      <div class="summary col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <h4>Model Score</h4>
+        <p>Some WDIs - such as life expectancy and agriculture - contribute to HDI (Human Development Index) more than others.
+          The model score from 0 to 1 indicates how predictive or relevant the indicators are to HDI - independent of the actual
+          values. A model score greater than or equal to 0.8 is considered a good predictive model.</p>
+        <h4>HDI</h4>  
+        <p>Human Development Index (HDI) is a measure of how developed a country is from a scale of 0 to 1.  Developed 
+          countries are defined as having HDI > 0.8. Use the form to either test a country's known WDI values or test different 
+          values to help predict HDI.</p>
+        <h4>Try it out!</h4>
+        <p>Let's try some examples. In 2017, the U.S. had an average life expectancy (from birth) of 78.5 years; agriculture was 
+          0.92% of GDP; population was 325 million; GDP was $19.49 trillion; employment was 2.5%. What was the HDI in the U.S. 
+          in 2017? What would happen if life expectancy dropped to 60? What if you only knew the value for GDP - $20 trillion? 
+          You might get a prediction, but the model score would be low and therefore not be a reliable indicator for HDI. Using  
+          the model to test different indicators, we can discover which ones have more of an affect on HDI and what values 
+          can result in a high HDI, thus helping with goal setting for different countries.</p>
+        </div> 
+
+    </div> <!-- End Main Content -->
 
     <!-- Footer -->
     <footer class="row">

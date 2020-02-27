@@ -1,7 +1,7 @@
 # Import necessary libraries
 from flask import Flask, render_template, redirect, request
-from flask_pymongo import PyMongo
-import pymongo
+# from flask_pymongo import PyMongo
+# import pymongo
 import predict
 
 
@@ -13,6 +13,19 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/primary")
+def primary():
+    return render_template("primary.html")
+
+@app.route("/secondary")
+def secondary():
+    return render_template("secondary.html")
+
+@app.route("/data")
+def data():
+    return render_template("data.html")
+
 
 @app.route("/predictor", methods=['GET', 'POST'])
 def predictor():
@@ -46,11 +59,15 @@ def score():
     if gdp:
         indicator = "GDP (USD)"
         indicators.append(indicator)
+        # Convert GDP to billion
+        gdp = float(gdp) * 1000000000
         values.append(gdp)
 
     if population:
         indicator = "Population"
         indicators.append(indicator)
+        # Convert population to million
+        population = float(population) * 1000000
         values.append(population)
 
     if employment:
@@ -61,15 +78,15 @@ def score():
     if len(indicators) == 0:
         score = 0
         hdi = 0
+    else:
+        # Calculate score
+        _, _, _, score, mse = predict.score_model(indicators)
+        # Calculate HDI
+        hdi = predict.predict_hdi(indicators, values)
 
-    # Calculate score
-    _, _, _, score, mse = predict.score_model(indicators)
-    # Calculate HDI
-    hdi = predict.predict_hdi(indicators, values)
-
-    # Round to 2 decimal places
-    score = round(score, 2)
-    hdi = round(hdi, 2)
+        # Round to 2 decimal places
+        score = round(score, 2)
+        hdi = round(hdi, 2)
 
     return render_template('predictor.html', score=score, hdi=hdi)
 

@@ -12,7 +12,7 @@ html, body {
 }
 
 p {
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 a, a:hover {
@@ -49,6 +49,7 @@ header nav {
     position: absolute;
     left: 0;
     top: 100px;
+    white-space: nowrap;
 }
 
 header nav li {
@@ -61,7 +62,11 @@ header nav li {
 }
 
 .main-content {
-    padding: 20px 55px;
+    padding: 20px 55px 20px 50px;
+}
+
+.app {
+    min-width: 420px; 
 }
 
 .form-group {
@@ -69,7 +74,7 @@ header nav li {
     border-radius: 5px;
     margin: 15px 0 10px 15px;
     padding: 30px 20px 20px 40px; 
-    width: 380px; 
+    width: 420px; 
 }
 
 .form-group p {
@@ -78,8 +83,8 @@ header nav li {
 
 label.right { 
     text-align: right;
-    padding-right: 5px;
-    width: 188px;
+    padding-right: 10px;
+    width: 175px;
 }
 
 input.wide { 
@@ -93,35 +98,39 @@ input.wide {
 
 .btn-default { 
     border: 0; 
+    outline: none !important;    
 }
 
-.small {
-    font-size: 0.8em;
-    margin-bottom: -6px;
+.btn-default:hover {
+    background-color: transparent;
+}
+
+small {
+    margin-left: 4px;
 }
 
 .end {
     margin: 10px 15px 55px 0;
 }
 
-#model, #score, #hdi { 
+#score, #hdi { 
     border: 1px solid lightgrey;
     border-radius: 3px;
     color: red; 
-    font-size: 1.5em; 
-    margin-top: 5px;
-    padding: 10px 40px;
-    width: 130px;
-}
-
-#score, #hdi { 
     font-size: 1.4em; 
+    margin-top: 5px;
+    min-height: 50px;
     padding: 10px 30px;
     width: 100px;
 }
 
 #score { 
+    color: green;
     border: none;
+}
+
+.summary {
+    padding: 0 30px;
 }
 
 footer {
