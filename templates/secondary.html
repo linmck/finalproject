@@ -8,7 +8,7 @@
         <title>Predicting HDI: Secondary Indicators</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../static/styles.css"> />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -23,7 +23,7 @@
                 <!-- Navigation -->
                 <nav>
                     <ul>
-                        <li><a href="/index">Intro</a></li>
+                        <li><a href="/">Intro</a></li>
                         <li><a href="/primary">Primary Indicators</a></li>
                         <li class="active">Secondary Indicators</li>
                         <li><a href="/predictor">Predicting HDI</a></li>
