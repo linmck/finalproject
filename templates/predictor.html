@@ -25,7 +25,7 @@
               <li><a href="/">Intro</a></li>
               <li><a href="/primary">Primary Indicators</a></li>
               <li><a href="/secondary">Secondary Indicators</a></li>
-              <li><a href="/predictor">Predicting HDI</a></li>
+              <li class="active">Predicting HDI</a></li>
               <li><a href="/data">About the Data</a></li>
           </ul>
       </nav>
@@ -33,13 +33,13 @@
 
     <div class="row main-content">
 
-      <div class="app col-xs-5 col-sm-5 col-md-5 col-lg-5">
+      <div class="app col-xs-12 col-sm-12 col-md-5 col-lg-5">
         <h3>World Development Indicators (WDI)</h3>
 
         <form class="row" method="post" action="{{ url_for('score') }}">
           <div class="form-group">
 
-            <p>Fill in one or more values below to calculate a model score and predict an HDI.</p>
+            <p>Fill in one or more values below to calculate a model <br>score and predict an HDI.</p>
 
             <div class="row">
               <label class="right" for="lifeexpectancy">Life Expectancy (Years)</label>
@@ -62,25 +62,31 @@
               <input class="wide" name="employment"> <small>(max 100)</small>
             </div>
 
-            <div class="row scores">
-
+            <div class="row submit">
               <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                <button class="btn btn-default">Model Score:</button>
-                <div id="score"> {{ score }}</div>      
+              </div>            
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <button class="btn btn-primary">Calculate</button>
+              </div>        
+            </div>
+
+            <div class="row scores">
+              <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <h5 style="margin-left: 8px;">Model Score:</h5>
+                <div id="score">{{ score }}</div>      
               </div>            
 
               <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                <button class="btn btn-primary">Predict HDI</button>
-                <div id="hdi"> {{ hdi }}</div>                    
+                <h5 style="margin-left: 35px;">HDI:</h5>
+                <div id="hdi">{{ hdi }}</div>                    
               </div>        
-
             </div>
 
           </div>
         </form>
       </div>  
 
-      <div class="summary col-xs-7 col-sm-7 col-md-7 col-lg-7">
+      <div class="summary col-xs col-sm col-md col-lg">
         <h4>Model Score</h4>
         <p>Some WDIs - such as life expectancy and agriculture - contribute to HDI (Human Development Index) more than others.
           The model score from 0 to 1 indicates how predictive or relevant the indicators are to HDI - independent of the actual
