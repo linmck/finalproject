@@ -139,6 +139,22 @@ small {
     padding: 0 30px 70px 15px;
 }
 
+        .carousel {
+            background: #2f4357;
+            margin-top: 20px;
+        }
+
+        .carousel-item {
+            text-align: center;
+            min-height: 280px;
+            /* Prevent carousel from being distorted if for some reason image doesn't load */
+        }
+
+        .bs-example {
+            margin: 20px;
+            padding-bottom: 100px;
+        }
+
 footer {
     border-top: 1px solid gray;
     color: gray;

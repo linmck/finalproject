@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Predicting HDI: Secondary Indicators</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles.css"> />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <!-- Header -->
+            <header class="row">
+                <h1><a href="/">Predicting HDI</a></h1>
+                <!-- Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="/index">Intro</a></li>
+                        <li><a href="/primary">Primary Indicators</a></li>
+                        <li class="active">Secondary Indicators</li>
+                        <li><a href="/predictor">Predicting HDI</a></li>
+                        <li><a href="/data">About the Data</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Body Content -->
+            <div class="row main-content">
+                <h3>Education Indicators</h3>
+                <h4>Delve into how education plays a role in impacting a country's Human Development Index.</h4>
+                <p>To the right you will find a chart demonstrating the relationship between Education Index and 
+                    Human Development Index. You can see that there is a clear linear relationship between a 
+                    country's Education Index and its Human Development Index. By striving to increase the 
+                    availability of basic education and encouraging advanced education for all citizens, 
+                    countries can potentially increase their overall HDI. Below you may scroll through select indicators  
+                    that countries could focus goals around to increase their overall Human Development Index.
+                </p>
+            </div>
+
+            <!-- Carousel -->
+            <div class="bs-example">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/examples/images/slide1.png" alt="First Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/examples/images/slide2.png" alt="Second Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/examples/images/slide3.png" alt="Third Slide">
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="row">
+                <p>&copy;2020 Ellen Hsu, Samita Limbu, Lindsey McKenna - University of Oregon Data Analytics Boot Camp.</p>
+            </footer>
+
+        </div>
+    </body>
+</html>
