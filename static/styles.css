@@ -168,6 +168,10 @@ small {
     padding-bottom: 10px;
 }
 
+.carousel-row {
+    margin-bottom: 60px;
+}
+
 .image-wrap {
     height: 350px;
     background-color: #e2e2e2;
