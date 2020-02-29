@@ -139,14 +139,32 @@ small {
     padding: 0 30px 70px 15px;
 }
 
+/* Secondary Indicator specifc styles*/
+.lined .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #494949;
+  }
+  
+  .lined .nav-link:hover {
+    border: none;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .lined .nav-link.active {
+    background: none;
+    color: #D8D52B;
+    border-color: #D8D52B;
+  }
+
 .indicator-option {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .image-wrap {
-    height: 400px;
-    background-color: #DBDBDB;
+    height: 330px;
+    background-color: #e2e2e2;
     position: relative;
 }
 
@@ -159,6 +177,13 @@ small {
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
+  .excerpt-title {
+    color: #233D4D;
+  } 
+
+  .excerpt-sub {
+    color: #337ab7;
+  } 
 
 footer {
     border-top: 1px solid gray;
