@@ -19,26 +19,42 @@
       <!-- Navigation -->
       <nav>
           <ul>
-              <li class="active">Intro</li>
+              <li class="active">Our Research</li>
               <li><a href="/primary">Primary Indicators</a></li>
               <li><a href="/secondary">Secondary Indicators</a></li>
               <li><a href="/predictor">Predicting HDI</a></li>
-              <li><a href="/data">About the Data</a></li>
           </ul>
       </nav>
     </header>
 
     <div class="row main-content">
-      <h3>World Development Indicators</h3>
-      <p>We are interested in exploring the Sustainable Development Goals set forth by The World Bank that they would like to
-        achieve by 2030. These goals are measured by several <a
-          href="http://datatopics.worldbank.org/world-development-indicators/" target="new">World Development Indicators</a>.
-        We will select several indicators to help predict the development of a country as measured by the <a
-          href="http://hdr.undp.org/en/data#" target="new">Human Development Index</a>.</p>
-      <h3>HDI</h3>
-      <p>The Human Development Index is a comprehensive measure of the development of a country that takes into account
-        factors other than just GDP such as health, education, infrastructure, etc.</p>
-      </div>
+        <h3>Our Research</h3>
+        <p>For this project we were interested in analyzing the <a
+          href="http://datatopics.worldbank.org/world-development-indicators/" target="new">World Development Indicators (WDI)</a>
+          that have been tracked by the World Bank for more than 50 years in order to help achieve global development goals. 
+          In conjunction, the U.N. has developed the <a 
+          href="http://hdr.undp.org/en/content/human-development-index-hdi" target="new">Human Development Index (HDI)</a> to focus 
+          on the criteria that define human achievement beyond just economic development. We wanted to discover which WDIs in 
+          particular affect HDI and what level of values can help increase HDI for improved human development. Our "primary" indicators 
+          were simply those that most countries have data for and have been tracked the longest. Our "secondary" indicators are ones
+          that we discovered to be more relevant to HDI and were worth exploring.</p>
+          <h3>The Machine Learning Model</h3>
+          <p>For this project, we used a multilinear regression model since HDI was numerical and we had a few features/indicators 
+            to consider. During the charting and modelling process we discovered which indicators, such as life expectancy and
+            education, weighed on the model much more heavily than others because they had strong linear relationships 
+            individually with HDI. For more moderate indicators, the ML model allowed us to create combinations of either 
+            known or estimated WDI values to try and reach the highest HDI.</p>
+
+        <h3>Summary Findings</h3>
+        <p>Economists often use GDP as the primary measure of a country's achievement or productivity. In our research however, when
+          we focused on human development (HDI) as our measure of success, certain indicators came to light as having strong 
+          influence on HDI. Surprisingly, GDP and GNI were only moderately relevant to human development; agriculture was inversely 
+          related to HDI; and population and employment were not likely related to HDI. While exploring other indicators, 
+          we discovered that education, gender equality, and access to basic and technological necessities were heavily relevant to
+          HDI. By using a model and exploring the less obvious indicators, we hope to uncover achievable and quantifiable
+          measures - besides what has historically been focused on - to improve human 
+          development and goal-setting for each country an/or the global community.</p>
+    </div>
 
     <!-- Footer -->
     <footer class="row">

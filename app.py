@@ -22,11 +22,6 @@ def primary():
 def secondary():
     return render_template("secondary.html")
 
-@app.route("/data")
-def data():
-    return render_template("data.html")
-
-
 @app.route("/predictor", methods=['GET', 'POST'])
 def predictor():
     return render_template("predictor.html")
