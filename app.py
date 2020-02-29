@@ -43,8 +43,8 @@ def score():
     lifeexpectancy = request.form['lifeexpectancy']
     agriculture = request.form['agriculture']
     gdp = request.form['gdp']
+    gni = request.form['gni']
     population = request.form['population']
-    employment = request.form['employment']
 
     if lifeexpectancy:
         indicator = "Life expectancy"
@@ -57,11 +57,18 @@ def score():
         values.append(agriculture)
 
     if gdp:
-        indicator = "GDP (USD)"
+        indicator = "GDP per capita"
         indicators.append(indicator)
         # Convert GDP to billion
-        gdp = float(gdp) * 1000000000
+        # gdp = float(gdp) * 1000000000
         values.append(gdp)
+
+    if gni:
+        indicator = "GNI per capita"
+        indicators.append(indicator)
+        # Convert GNI to billion
+        # gni = float(gni) * 1000000000
+        values.append(gni)
 
     if population:
         indicator = "Population"
@@ -69,11 +76,6 @@ def score():
         # Convert population to million
         population = float(population) * 1000000
         values.append(population)
-
-    if employment:
-        indicator = "Employment (%)"
-        indicators.append(indicator)
-        values.append(employment)
 
     if len(indicators) == 0:
         score = 0
