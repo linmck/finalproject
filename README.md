@@ -9,10 +9,10 @@ by Ellen Hsu, Samita Limbu, and Lindsey McKenna
 - **Sat, Feb 29:** Front End App/Website due
 - **Mon, Mar 2: FINAL PRESENTATION**
 
-**Samita:** Primary charts and indicators
-**Ellen:** Machine Learning Models<br>
+**Samita:** Primary charts and indicators<br>
 **Lindsey:** Exploratory charts and indicators <br>
-**Ellen:** Flask App or GitHub Pages<br>
+**Ellen:** Machine Learning Models<br>
+**Ellen:** Flask App on Heroku<br>
 
 
 ## Project Topic
@@ -37,5 +37,3 @@ We are interested in exploring the Sustainable Development Goals set forth by Th
 
 ## Project Goals
 We will present our findings in a dashboard of pre-made charts and the user can select various indicators. Our data set is very robust so, through Machine Learning, we will find the top indicators that are the most predictive of HDI. 
-
-![**Chart Inspo**](resources/images/inspo-hdi.png)<br>
