@@ -185,7 +185,7 @@ small {
 }
 
 .primary-image img {
-    height: 75%;
+    height: 85%;
     display: block;
     position: absolute;
     top: 50%;
@@ -197,7 +197,7 @@ small {
 .slide-text-wrap{
     display: block;
     margin-top: 5%;
-    margin-right: 20%;
+    margin-right: 15%;
 }
 
 .image-wrap img {
@@ -211,7 +211,9 @@ small {
 }
 
 .slide-wrap {
-    height: 350px;
+    height: 290px;
+    margin-left: 2%;
+    margin-right: 2%;
     background-color: #e2e2e2;
 }
 
