@@ -40,6 +40,7 @@ def score():
     gdp = request.form['gdp']
     gni = request.form['gni']
     population = request.form['population']
+    employment = request.form['employment']
 
     if lifeexpectancy:
         indicator = "Life expectancy"
@@ -72,6 +73,11 @@ def score():
         population = float(population) * 1000000
         values.append(population)
 
+    if employment:
+        indicator = "Employment (%)"
+        indicators.append(indicator)
+        values.append(employment)
+
     if len(indicators) == 0:
         score = 0
         hdi = 0
@@ -84,6 +90,11 @@ def score():
         # Round to 2 decimal places
         score = round(score, 2)
         hdi = round(hdi, 2)
+
+    if hdi > 1:
+        hdi = 1
+    elif hdi < 0:
+        hdi = 0   
 
     return render_template('predictor.html', score=score, hdi=hdi)
 

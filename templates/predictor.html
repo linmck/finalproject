@@ -46,6 +46,10 @@
               <input class="wide" name="lifeexpectancy"> <small>(max 120)</small>
             </div>
             <div class="row">
+              <label class="right" for="agriculture">Agriculture (% of GDP)</label>
+              <input class="wide" name="agriculture"> <small>(max 100)</small>
+            </div>
+            <div class="row">
               <label class="right" for="gdp">GDP per capita (USD)</label>
               <input class="wide" name="gdp"> <small>(max 120,000)</small>
             </div>
@@ -58,8 +62,8 @@
               <input class="wide" name="population"> <small>(max 8,000)</small>
             </div>
             <div class="row">
-              <label class="right" for="agriculture">Agriculture (% of GDP)</label>
-              <input class="wide" name="agriculture"> <small>(max 100)</small>
+              <label class="right" for="employment">Employment (%)</label>
+              <input class="wide" name="employment"> <small>(max 100)</small>
             </div>
 
             <div class="row submit">
@@ -110,6 +114,18 @@
           prediction, but the model score would be low and therefore not be a reliable indicator for HDI. Using the 
           model to test different indicators, we can discover which ones have more of an affect on HDI and what
           values can result in a high HDI, thus helping with goal setting for different countries.</p>
+
+        <p><a href="{{ url_for('static', filename='primary_pivot.csv') }}">Download the full list of countries and their 
+          primary WDI values.</a></p>
+        <hr>
+
+        <h4>Primary WDIs v. Secondary WDIs</h4>
+        <p>The form above focuses on primary WDIs because of the difference in data size between primary and secondary 
+          WDIs. For the primary WDIs, we had about 3,600 combined data points recorded since 1991. For the 
+          secondary WDIs, we had less than 1,000 data points each starting in 2014. We decided not to combine 
+          the primary and secondary WDIs so as not to adversely affect the accuracy of the multilinear model 
+          score above.</p>
+  
       </div>
 
     </div> <!-- End Main Content -->

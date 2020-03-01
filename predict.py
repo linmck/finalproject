@@ -35,7 +35,7 @@ def score_model(array):
     #  Basic Data Cleaning  #
     #########################
 
-    filepath = os.path.join('resources','pivot_df.csv')
+    filepath = os.path.join('static','primary_pivot.csv')
     pivot_df = pd.read_csv(filepath)
 
     # Specify indicator(s)
@@ -56,7 +56,7 @@ def score_model(array):
 
     # Flatten the data into arrays
     X = np.array(X)
-    y = np.array(pivot_df["HDI"])
+    y = np.array(pivot_df["hdi"])
     y = y.reshape(-1, 1)
 
 
