@@ -181,6 +181,7 @@ small {
 .primary-image {
     display: block;
     left: 5%;
+    bottom: 5%;
 }
 
 .primary-image img {
@@ -188,14 +189,14 @@ small {
     display: block;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
 
 .slide-text-wrap{
     display: block;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: 20%;
 }
 
