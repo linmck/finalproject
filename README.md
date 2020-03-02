@@ -1,39 +1,35 @@
 # Predicting the Human Developent Index
 by Ellen Hsu, Samita Limbu, and Lindsey McKenna
 
+## Live Website
+[**Predict HDI on Heroku**](https://predict-hdi.herokuapp.com/)
 
-## Due Dates
-- **Sat, Feb 22:** Initial Analysis (choose 3-4 indicators/features, ML model)
-- **Mon, Feb 24:** Charts and Models due
-- **Wed, Feb 26:** (Edits & Revisions)
-- **Sat, Feb 29:** Front End App/Website due
-- **Mon, Mar 2: FINAL PRESENTATION**
+## Project Summary
+For this project we were interested in analyzing the [World Development Indicators (WDI)](http://datatopics.worldbank.org/world-development-indicators/) that have been tracked by the World Bank for more than 50 years in order to help achieve global development goals. In conjunction, the U.N. has developed the [Human Development Index (HDI)](http://hdr.undp.org/en/data#) to focus human achievement beyond just economic development. We wanted to discover which WDIs, in particular, affect HDI and what WDI values can increase HDI.
 
-**Samita:** Primary charts and indicators<br>
-**Lindsey:** Exploratory charts and indicators <br>
-**Ellen:** Machine Learning Models<br>
-**Ellen:** Flask App on Heroku<br>
+### Machine Learning
+We primarily used a multilinear regression model because HDI was numerical (as opposed to categorical) and we had a few features/indicators to consider. Some WDIs weighed more heavily in the model than others because they had strong linear relationships to HDI. For more moderately weighted WDIs, the model allowed us to combine of either known or estimated WDI values to predict HDI.
 
+### Data Sets
+1. [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/)
+<br>If you decide to git clone the project and run the notebook [Predict_HDI.ipynb](https://github.com/linmck/finalproject/blob/master/Predict_HDI.ipynb), please download the [original bulk CSV](http://databank.worldbank.org/data/download/WDI_csv.zip) from Bulk Downloads and extract the file 'WDIData.csv' to the [resources](https://github.com/linmck/finalproject/tree/master/resources) folder. In order to save storage capacity we chose not to upload this file to GitHub since it is ~198MB.<br>
 
-## Project Topic
-Can we predict the development trajectory of a country (as measured by HDI) based on the World Development Indicators surveyed by The World Bank?
+2. [Human Development Index](http://hdr.undp.org/en/data#)
+<br>From this page, we downloaded the data from Dimensions: 
+    - "Human Development Index (HDI)"
+    - "Education > Education Index"
+    - "Gender > Gender Inequality Index (GII)"
+    - Plus several other [secondary indicators](https://predict-hdi.herokuapp.com/secondary) 
 
-
-## Rationale 
-We are interested in exploring the Sustainable Development Goals set forth by The World Bank that they would like to achieve by 2030. These goals are measured by several [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/). We will select several indicators the help predict the development of a country as measured by the [Human Development Index](http://hdr.undp.org/en/data#). The Human Development Index is a comprehensive measure of the development of a country that takes into account factors other than just GDP such as health, education, infrastructure, etc. 
-
-
-## Data Sets
-- [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/)
-- [Human Development Index](http://hdr.undp.org/en/data#)
-
-
-## Project Stack
+### Project Stack
 - Data Processing - Python Pandas
 - Machine Learning - SciKit Learn
 - Visualizations - Matplotlib
 - Publication - Flask App hosted on Heroku
 
-
-## Project Goals
-We will present our findings in a dashboard of pre-made charts and the user can select various indicators. Our data set is very robust so, through Machine Learning, we will find the top indicators that are the most predictive of HDI. 
+### Dates
+- **Sat, Feb 22:** Initial Analysis (choose 3-4 indicators/features, ML model)
+- **Mon, Feb 24:** Charts and Models due
+- **Wed, Feb 26:** (Edits & Revisions)
+- **Sat, Feb 29:** Front End App/Website due
+- **Mon, Mar 2: FINAL PRESENTATION**
