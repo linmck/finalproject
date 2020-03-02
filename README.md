@@ -1,11 +1,11 @@
-# Predicting the Human Developent Index
+# Predicting the Human Development Index
 by Ellen Hsu, Samita Limbu, and Lindsey McKenna
 
 ## Live Website
 [**Predict HDI on Heroku**](https://predict-hdi.herokuapp.com/)
 
 ## Project Summary
-For this project we were interested in analyzing the [World Development Indicators (WDI)](http://datatopics.worldbank.org/world-development-indicators/) that have been tracked by the World Bank for more than 50 years in order to help achieve global development goals. In conjunction, the U.N. has developed the [Human Development Index (HDI)](http://hdr.undp.org/en/data#) to focus human achievement beyond just economic development. We wanted to discover which WDIs, in particular, affect HDI and what WDI values can increase HDI.
+For this project we were interested in analyzing the [World Development Indicators (WDI)](http://datatopics.worldbank.org/world-development-indicators/) that have been tracked by the World Bank for more than 50 years in order to help achieve global development goals. In conjunction, the U.N. has developed the [Human Development Index (HDI)](http://hdr.undp.org/en/data#) to focus human achievement beyond just economic development. We wanted to discover which WDIs, in particular, affect HDI and what WDI values can increase HDI. We charted individual WDIs against HDI; and created a form that allows a user to enter any number of WDI values to calculate a model score and a predicted HDI.
 
 ### Machine Learning
 We primarily used a multilinear regression model because HDI was numerical (as opposed to categorical) and we had a few features/indicators to consider. Some WDIs weighed more heavily in the model than others because they had strong linear relationships to HDI. For more moderately weighted WDIs, the model allowed us to combine of either known or estimated WDI values to predict HDI.
