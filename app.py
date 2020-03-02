@@ -40,7 +40,6 @@ def score():
     gdp = request.form['gdp']
     gni = request.form['gni']
     population = request.form['population']
-    employment = request.form['employment']
 
     if lifeexpectancy:
         indicator = "Life expectancy"
@@ -72,11 +71,6 @@ def score():
         # Convert population to million
         population = float(population) * 1000000
         values.append(population)
-
-    if employment:
-        indicator = "Employment (%)"
-        indicators.append(indicator)
-        values.append(employment)
 
     if len(indicators) == 0:
         score = 0
