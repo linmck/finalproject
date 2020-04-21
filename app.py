@@ -95,8 +95,17 @@ def score():
         score = round(score, 2)
         hdi = round(hdi, 2)
 
+<<<<<<< HEAD
     return render_template('predictor.html', score=score, hdi=hdi, 
         lifeexpectancy=lifeexpectancy, agriculture=agriculture, gdp=gdp, gni=gni, population=population)
+=======
+    if hdi > 1:
+        hdi = 1
+    elif hdi < 0:
+        hdi = 0   
+
+    return render_template('predictor.html', score=score, hdi=hdi)
+>>>>>>> bcf2ea2fd86cf9b734ba0fd5d7ebad5f2702638b
 
 
 # Preview locally on http://127.0.0.1:5000/

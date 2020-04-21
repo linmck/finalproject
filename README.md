@@ -29,7 +29,10 @@ We primarily used a multilinear regression model because HDI was numerical (as o
 
 ### Duration
 2 weeks
+<<<<<<< HEAD
 
 ### Screenshots
 <kbd><img src="screenshots/screenshot_machine_learning_1.png" width="430" /></kbd><kbd><img src="screenshots/screenshot_machine_learning_2.png" width="430" /></kbd><br />
 <kbd><img src="screenshots/screenshot_machine_learning_3.png" width="430" /></kbd><kbd><img src="screenshots/screenshot_machine_learning_4.png" width="430" /></kbd><br />
+=======
+>>>>>>> bcf2ea2fd86cf9b734ba0fd5d7ebad5f2702638b
