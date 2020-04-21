@@ -69,8 +69,8 @@ def score():
         indicator = "Population"
         indicators.append(indicator)
         # Convert population to million
-        population = float(population) * 1000000
-        values.append(population)
+        population_m = float(population) * 1000000
+        values.append(population_m)
 
     if len(indicators) == 0:
         score = 0
@@ -81,11 +81,22 @@ def score():
         # Calculate HDI
         hdi = predict.predict_hdi(indicators, values)
 
+        if score > 1:
+            score = 1
+        elif score < 0:
+            score = 0
+
+        if hdi > 1:
+            hdi = 1
+        elif hdi < 0:
+            hdi = 0   
+
         # Round to 2 decimal places
         score = round(score, 2)
         hdi = round(hdi, 2)
 
-    return render_template('predictor.html', score=score, hdi=hdi)
+    return render_template('predictor.html', score=score, hdi=hdi, 
+        lifeexpectancy=lifeexpectancy, agriculture=agriculture, gdp=gdp, gni=gni, population=population)
 
 
 # Preview locally on http://127.0.0.1:5000/
